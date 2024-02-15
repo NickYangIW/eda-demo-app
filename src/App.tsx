@@ -12,6 +12,7 @@ import Stack from '@mui/material/Stack';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { postDataRequest } from './api/CommonService';
+import { Avatar } from '@mui/material';
 
 function App() {
   const [selectedSex, setSelectedSex] = useState("Female")
@@ -51,14 +52,12 @@ function App() {
             alignItems: 'center',
           }}
         >
-          <Typography component="h1" variant="h5">
-            Publish User Info Message
-          </Typography>
+          <img src="https://i0.wp.com/integration.works/wp-content/uploads/2022/01/128IWFullLogopng.png?fit=188%2C50&amp;ssl=1" alt="Integration Works"/>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
-              required
               fullWidth
+              color="secondary"
               id="firstName"
               label="First Name"
               name="firstName"
@@ -66,23 +65,25 @@ function App() {
             />
             <TextField
               margin="normal"
-              required
+              color="secondary"
               fullWidth
               name="lastName"
               label="Last Name"
               id="lastName"
             />
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2} sx={{ mt : 2 }}>
               <TextField
                 margin="normal"
+                color="secondary"
                 fullWidth
                 name="age"
                 label="Age"
                 id="age"
               />
               <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Sex</InputLabel>
+                <InputLabel id="demo-simple-select-label" color="secondary">Sex</InputLabel>
                 <Select
+                  color="secondary"
                   labelId="sex-select-label-id"
                   id="sex-select"
                   value={selectedSex}
