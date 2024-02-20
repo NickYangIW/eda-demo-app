@@ -26,7 +26,7 @@ function App() {
       sex: selectedSex,
     }
     console.log(payload);
-    const pushUserInfoMessageResult = await postDataRequest("/", payload)
+    const pushUserInfoMessageResult = await postDataRequest("http://localhost:8080/", payload)
 
     if (pushUserInfoMessageResult.status === 200) {
       console.log("Push message successfully")

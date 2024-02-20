@@ -1,13 +1,13 @@
 FROM node:20.9
 
-WORKDIR /eda-demo-app/
+WORKDIR /usr/src/app
 
-COPY public/ /eda-demo-app/public
-COPY src/ /eda-demo-app/src
-COPY package.json /eda-demo-app/
+COPY package*.json ./
 
-RUN npm install
+RUN yarn
 
-EXPOSE 3000
+COPY . .
 
-CMD [ "npm", "start" ]
+EXPOSE 8083
+
+CMD [ "yarn", "start" ]
