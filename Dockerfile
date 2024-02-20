@@ -1,10 +1,10 @@
 FROM node:20.9
 
-WORKDIR /EDA-DEMO-APP/
+WORKDIR /eda-demo-app/
 
-COPY public/ /EDA-DEMO-APP/public
-COPY src/ /EDA-DEMO-APP/src
-COPY package.json /EDA-DEMO-APP/
+COPY public/ /eda-demo-app/public
+COPY src/ /eda-demo-app/src
+COPY package.json /eda-demo-app/
 
 RUN npm install
 
